@@ -68,7 +68,6 @@ export default function SignUpPage() {
         className="bg-black border border-white p-6 rounded-lg shadow-md space-y-4 w-full max-w-sm"
       >
         <h1 className="text-xl font-bold text-center text-white">Sign Up</h1>
-
         <input
           type="text"
           value={username}
@@ -101,16 +100,23 @@ export default function SignUpPage() {
           required
           className="w-full px-3 py-2 border rounded"
         />
-
         {error && <p className="text-red-600 text-sm">{error}</p>}
         {success && <p className="text-green-500 text-sm">{success}</p>}
-
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
+          className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 cursor-pointer"
         >
           {loading ? 'Signing up…' : 'Sign Up'}
+        </button>
+
+        <button
+          type="button"
+          disabled={loading}
+          onClick={() => router.push('/login')}
+          className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 cursor-pointer"
+        >
+          Go back
         </button>
       </form>
     </main>
