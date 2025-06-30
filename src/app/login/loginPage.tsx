@@ -75,7 +75,7 @@ export default function LoginPage() {
           href="/login/signup"
           className="flex justify-center bg-red-600  hover:bg-red-700 text-white px-6 py-3 rounded-xl shadow-lg transition"
         >
-          🏆 Sign Up
+          Sign Up
         </Link>
       </form>
     </main>

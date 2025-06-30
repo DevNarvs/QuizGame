@@ -3,6 +3,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { supabase } from '@/lib/supabaseClient';
+import Link from 'next/link';
 
 interface Question {
   id: number;
@@ -20,14 +21,14 @@ export default function QuizPage() {
   const [current, setCurrent] = useState(0);
   const [selected, setSelected] = useState<string | null>(null);
   const [score, setScore] = useState(0);
-  const [timer, setTimer] = useState(20);
+  const [timer, setTimer] = useState(25);
   const [showResult, setShowResult] = useState(false);
 
   useEffect(() => {
     const fetchQuestions = async () => {
       const { data, error } = await supabase.from('questions').select('*');
       if (!error && data) {
-        const shuffled = shuffleArray(data).slice(0, 5);
+        const shuffled = shuffleArray(data).slice(0, 20);
         setQuestions(shuffled);
       }
     };
@@ -161,6 +162,12 @@ function Result({
           ))}
         </ul>
       </div>
+      <Link
+        href="/landing"
+        className="bg-green-600 mt-4 text-white mr-6 px-4 py-2 rounded hover:bg-green-700 cursor-pointer"
+      >
+        Go Back
+      </Link>
     </div>
   );
 }
