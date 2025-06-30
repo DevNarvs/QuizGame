@@ -26,7 +26,7 @@ export default function QuizPage() {
 
   useEffect(() => {
     const fetchQuestions = async () => {
-      const { data, error } = await supabase.from('questions').select('*');
+      const { data, error } = await supabase.from('nursing_quiz_questions').select('*');
       if (!error && data) {
         const shuffled = shuffleArray(data).slice(0, 20);
         setQuestions(shuffled);
@@ -126,7 +126,7 @@ function Result({
         username: userEmail,
         score,
         total,
-        quizType: 'Programming',
+        quizType: 'Nursing',
       });
 
       if (error) {

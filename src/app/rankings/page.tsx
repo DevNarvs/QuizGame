@@ -10,6 +10,7 @@ interface QuizResult {
   score: number;
   total: number;
   created_at: string;
+  quizType: string;
 }
 
 export default function RankingsPage() {
@@ -19,7 +20,7 @@ export default function RankingsPage() {
     const fetchRankings = async () => {
       const { data, error } = await supabase
         .from('quiz_results')
-        .select('id, username, score, total, created_at')
+        .select('*')
         .order('score', { ascending: false })
         .limit(20);
 
@@ -40,6 +41,7 @@ export default function RankingsPage() {
               <span className="font-medium">
                 {i + 1}. {r.username}
               </span>
+              <span className="font-medium">{r.quizType}</span>
               <span className="text-blue-400">
                 {r.score} / {r.total}
               </span>

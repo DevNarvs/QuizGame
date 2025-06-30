@@ -14,7 +14,13 @@ export default function Home() {
             href="/dashboard"
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-lg transition"
           >
-            🚀 Start Quiz
+            🚀 Developer Quiz
+          </Link>
+          <Link
+            href="/dashboard/nursing"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-lg transition"
+          >
+            🚀 Nursing Quiz
           </Link>
           <Link
             href="/rankings"
