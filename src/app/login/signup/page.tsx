@@ -65,16 +65,16 @@ export default function SignUpPage() {
     <main className="min-h-screen flex items-center justify-center bg-black">
       <form
         onSubmit={handleSignUp}
-        className="bg-black border border-white p-6 rounded-lg shadow-md space-y-4 w-full max-w-sm"
+        className="bg-white border border-white p-6 rounded-lg shadow-md space-y-4 w-full max-w-sm"
       >
-        <h1 className="text-xl font-bold text-center text-white">Sign Up</h1>
+        <h1 className="text-xl font-bold text-center text-black">Sign Up</h1>
         <input
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           placeholder="Username"
           required
-          className="w-full px-3 py-2 border rounded"
+          className="w-full px-3 py-2 text-black border border-black rounded"
         />
         <input
           type="text"
@@ -82,7 +82,7 @@ export default function SignUpPage() {
           onChange={(e) => setFullname(e.target.value)}
           placeholder="Full Name"
           required
-          className="w-full px-3 py-2 border rounded"
+          className="w-full px-3 py-2 text-black border border-black rounded"
         />
         <input
           type="email"
@@ -90,7 +90,7 @@ export default function SignUpPage() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
           required
-          className="w-full px-3 py-2 border rounded"
+          className="w-full px-3 py-2 text-black border border-black rounded"
         />
         <input
           type="password"
@@ -98,7 +98,7 @@ export default function SignUpPage() {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
           required
-          className="w-full px-3 py-2 border rounded"
+          className="w-full px-3 py-2 text-black border border-black rounded"
         />
         {error && <p className="text-red-600 text-sm">{error}</p>}
         {success && <p className="text-green-500 text-sm">{success}</p>}
