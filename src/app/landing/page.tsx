@@ -23,6 +23,18 @@ export default function Home() {
             🚀 Nursing Quiz
           </Link>
           <Link
+            href="/dashboard/dota2"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-lg transition"
+          >
+            🚀 Dota2 Quiz
+          </Link>
+          <Link
+            href="/dashboard/mlbb"
+            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl shadow-lg transition"
+          >
+            🚀 MLBB Quiz
+          </Link>
+          <Link
             href="/rankings"
             className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl shadow-lg transition"
           >
